@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SimonBoothroyd/plotmol/archive/{{ version }}.tar.gz
-  sha256: 2d083ddc1bffd5cee257c0d55336add6afe8ef8cc9748d7ead4fa3efc95151eb
+  sha256: 3f60a6606f185ff6fbf27f04661fcde4e66bade002e3fe1efa07d1c09667679d
 
 build:
   noarch: python
