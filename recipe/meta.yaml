@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "plotmol" %}
 {% set version = "0.1.0" %}
 
@@ -12,11 +13,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - versioneer
     # needed for dynamic version, as setuptools will try
@@ -25,10 +26,12 @@ requirements:
     - rdkit
     - bokeh >=3
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - rdkit
     - bokeh >=3
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - plotmol
 
